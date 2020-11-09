@@ -15,7 +15,7 @@
 
 - **void setValue(int)** - установить число
 - **bool isValid()** - проверка, действительно ли установленное число простое
-- **bool testPrime(int)** - проверка переданного числа на простоту
+- **bool checkPrime(int)** - проверка переданного числа на простоту
 - **int countBetween(Prime&)** - подсчет количества простых чисел между установленным и переданным
 - **Prime nextPrime()** -  возвращение простого числа, расположенного следом за установленным
 - **int getValue()** - возвращение установленного числа.
@@ -33,7 +33,7 @@ int main()
     Prime num1,num2;
     num1.setValue(2);
     num2=num1.nextPrime();          // в num2 устанавливается 3
-    bool result=num1.testPrime(17); // true
+    bool result=num1.checkPrime(17); // true
     num2.setValue(17);              // в num2 устанавливаем 17
     int count=num2.countBetween(num1); // count=5
     bool ans=num2.isValid();        // true

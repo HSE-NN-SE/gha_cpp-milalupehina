@@ -43,19 +43,31 @@ bool Prime::checkPrime(int n)
 //** - подсчет количества простых чисел между установленным и переданным
 int Prime::countBetween(Prime& num2)
 {
-    int ret = 0;
-    int beg = getValue();
-    int end = num2.getValue();
+    int ret1 = 0;
+    int ret2 = 0;
+    int beg = getValue();//17
+    int end = num2.getValue();//2
 
 
-    Prime tmp;
-    for (int i = beg+1; i < end; i++) {
-        tmp.setValue(i);
-        if(tmp.isValid()) ret++;
+
+    if(beg < end)
+    {
+        Prime tmp1;
+        for (int i = beg+1; i < end; i++) {
+            tmp1.setValue(i);
+            if(tmp1.isValid()) ret1++;
+        }
+        return ret1;
     }
-
-    return ret;
-
+    else
+    {
+        Prime tmp2;
+        for (int i = beg-1; i > end; i--) {
+            tmp2.setValue(i);
+            if(tmp2.isValid()) ret2++;
+        }
+        return ret2;
+    }
 }
 
 //** -  возвращение простого числа, расположенного следом за установленным

@@ -1,6 +1,7 @@
 #include "Prime.h"
 #include <iostream>
 #include <cstring>
+#include <cmath>
 
 int main()
 {

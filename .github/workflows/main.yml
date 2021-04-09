@@ -41,7 +41,6 @@ jobs:
         
       - name: folder_attempt
         run: |
-          cd src 
           cl /EHsc Prime.cpp main.cpp
 
 

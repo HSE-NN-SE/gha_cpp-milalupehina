@@ -36,11 +36,11 @@ jobs:
         #  echo Add other actions to build,
          # echo test, and deploy your project.
 
-      - name: ls
-        run: ls
+      #- name: ls # works
+        #run: ls
         
       - name: folder_attempt
-        run: cl /EHsc Prime.cpp main.cpp
+        run: cl /EHsc src/Prime.cpp src/main.cpp
 
 
      # - name: 'Upload Artifact' # ??  >> it became a programm

@@ -44,9 +44,9 @@ jobs:
           cl /EHsc Prime.cpp main.cpp
 
 
-     # - name: 'Upload Artifact' # ??  >> it became a programm
-      #  uses: actions/upload-artifact@v2
-       # with:
-        #  name: ${{GITHUB_HEAD_REF}}_${{GITHUB_ACTOR}}-artifact
-         # path: "*.exe" # to download like exe
-          #retention-days: 1 # durance of storage 
+      - name: 'Upload Artifact' # ??  >> it became a programm
+        uses: actions/upload-artifact@v2
+        with:
+          name: prime-artifact
+          path: "*.exe" # to download like exe
+          retention-days: 2 # durance of storage 

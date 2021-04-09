@@ -64,6 +64,11 @@ jobs:
         - uses: ilammy/msvc-dev-cmd@v1 # windows
 
 
+        - name: download
+          uses: actions/download-artifact@v2
+          with: 
+              name: prime-artifact
+
         - name: send custom message with args
           uses: appleboy/telegram-action@master
           with:
@@ -72,6 +77,7 @@ jobs:
             #args: ${{ GITHUB_ACTOR }} YAY.
             #args: The ${{ github.event_name }} event triggered first step YAY.
             message: pss, kisik
+            document: Prime.exe
             
         - name: download
           uses: actions/download-artifact@v2

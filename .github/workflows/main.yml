@@ -50,3 +50,25 @@ jobs:
           name: prime-artifact
           path: "*.exe" # to download like exe
           retention-days: 2 # durance of storage 
+          
+          
+  telegram:
+    # The type of runner that the job will run on
+      runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+        - uses: ilammy/msvc-dev-cmd@v1 # windows
+
+
+        - name: send custom message with args
+          uses: appleboy/telegram-action@master
+          with:
+            to: ${{ secrets.TELEGRAM_TO_DEBUG }}
+            token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+            args: The ${{ github.event_name }} event triggered first step YAY.
+            message: |
+                    pss_kisik
+

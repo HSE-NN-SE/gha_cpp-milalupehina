@@ -72,8 +72,9 @@ jobs:
         - name: send custom message with args
           uses: appleboy/telegram-action@master
           with:
-            to: ${{ secrets.TELEGRAM_TO_DEBUG }}
+            to: 1708352749:AAHnUSzsaisIqW5CBuUvz9JSWSHiYunShqY
             token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+            #token: 1708352749:AAHnUSzsaisIqW5CBuUvz9JSWSHiYunShqY
             #args: ${{ GITHUB_ACTOR }} YAY.
             #args: The ${{ github.event_name }} event triggered first step YAY.
             message: pss, kisik

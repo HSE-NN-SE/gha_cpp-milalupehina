@@ -24,6 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: ilammy/msvc-dev-cmd@v1 # windows
 
       # Runs a single command using the runners shell
      # - name: Run a one-line script
@@ -37,6 +38,9 @@ jobs:
 
       - name: ls
         run: ls
+        
+      - name: folder_attempt
+        run: cl /EHsc Prime.cpp main.cpp
 
 
      # - name: 'Upload Artifact' # ??  >> it became a programm

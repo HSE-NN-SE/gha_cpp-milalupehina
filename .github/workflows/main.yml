@@ -70,6 +70,5 @@ jobs:
             to: ${{ secrets.TELEGRAM_TO_DEBUG }}
             token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
             args: The ${{ github.event_name }} event triggered first step YAY.
-            message: |
-                    pss_kisik
+            message: pss, kisik
 

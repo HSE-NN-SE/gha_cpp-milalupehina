@@ -40,7 +40,9 @@ jobs:
         #run: ls
         
       - name: folder_attempt
-        run: cl /EHsc src/Prime.cpp src/main.cpp
+        run: |
+          cd src 
+          cl /EHsc Prime.cpp main.cpp
 
 
      # - name: 'Upload Artifact' # ??  >> it became a programm

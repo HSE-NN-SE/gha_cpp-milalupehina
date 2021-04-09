@@ -1,4 +1,4 @@
-#include <Prime.h>
+#include "header\Prime.h"
 #include <iostream>
 #include <cstring>
 #include <cmath>

@@ -69,6 +69,15 @@ jobs:
           with:
             to: ${{ secrets.TELEGRAM_TO_DEBUG }}
             token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-            args: The ${{ github.event_name }} event triggered first step YAY.
-            message: pss, kisik
-
+            args: ${{ GITHUB_ACTOR }} YAY.
+            #args: The ${{ github.event_name }} event triggered first step YAY.
+            # message: pss, kisik
+            
+        - name: download
+          uses: actions/download-artifact@v2
+          with: 
+            name: prime-artifact
+            
+ 
+    
+      
